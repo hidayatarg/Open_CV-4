@@ -82,3 +82,31 @@ print(img[:, :, 0])
 # total number of pixel in this image
 print(img.size)
 ```
+
+## Data Types and Structures
+
+```python
+import numpy as np 
+import cv2
+
+# 0 array
+# image with 150px tall, 200 width, one chanel, type of image
+black = np.zeros([100, 200, 1], 'uint8')
+
+# show the image
+cv2.imshow("black", black)
+
+# see first pixel values
+print(black[0, 0, : ])
+
+# hang user screen
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+```
+
+When you run the script you can see the black screen on the interface. click on the program window by pressing any key the window will disappear.
+
+We also see the one pixel value that was printed in console (Terminal).
+
+
