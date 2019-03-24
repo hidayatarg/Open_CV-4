@@ -1,17 +1,36 @@
 import numpy
 import cv2
+# 1 means using the default colors and channels
+# 0 image will be read black and white
+img = cv2.imread("open-cv.png", 1)
 
-img = cv2.imread("open-cv.png")
+print(img)
+print(type(img))
 
-cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
-cv2.imshow("Image", img)
+# image pixel
+print(len(img))
 
-# Write the image to a file  
-cv2.imwrite("output.jpg", img)
+# image top row pixel
+print(len(img[0]))
 
-# Ready to show image
-# wait for specifed minutes
-cv2.waitKey(0)
+# number of channels in image output: 3 means RGB 
+print(len(img[0][0]))
+
+# information about image
+# horizontal rows, columns and channels
+print(img.shape)
+
+#Type of image (unsigned integer value of eight)
+print(img.dtype)
+
+# pixel values at specific array
+print(img[10, 5])
+
+# all pixel at one chanel of image
+print(img[:, :, 0])
+
+# total number of pixel in this image
+print(img.size)
 
 
 
